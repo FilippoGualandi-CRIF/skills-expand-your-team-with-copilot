@@ -1,0 +1,65 @@
+name: Bug Report
+description: Report a problem with the website
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below to help us fix the issue quickly.
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: What is not working correctly?
+      description: Please describe the problem you're experiencing in simple terms.
+      placeholder: Example - The signup button doesn't work when I click it, or the website is showing the wrong school colors.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What should happen instead?
+      description: Describe what you expected to happen.
+      placeholder: Example - When I click the signup button, students should be registered for the activity.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Which part of the website is affected?
+      description: Select the area where you're seeing the problem.
+      options:
+        - Homepage/Main view
+        - Activity cards
+        - Signup/Registration
+        - Login system
+        - Filters (search, category, day, time)
+        - Colors/Styling
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce the problem
+      description: How can we recreate this issue? List the steps in order.
+      placeholder: |
+        1. Go to the activities page
+        2. Click on 'Chess Club'
+        3. Click the signup button
+        4. See error message
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional information
+      description: Add any other details, screenshots, or context about the problem.
+      placeholder: Example - This started happening yesterday, or this only happens on mobile devices.
+    validations:
+      required: false
