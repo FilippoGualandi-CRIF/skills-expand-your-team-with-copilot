@@ -1,6 +1,6 @@
 # Mergington High School Activities
 
-A website application that allows students to view and sign up for extracurricular activities, with teacher authentication for managing student registrations.
+A website application that allows students to view extracurricular activities and teachers to manage student registrations.
 
 ## Features
 
