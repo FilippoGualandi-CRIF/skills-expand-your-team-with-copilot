@@ -1,0 +1,91 @@
+name: UI / Design Change
+description: Request changes to colors, layout, styling, or visual appearance
+title: "[Design]: "
+labels: ["design", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request changes to how the website looks! Please provide specific details about the design changes you need.
+
+  - type: textarea
+    id: design-change
+    attributes:
+      label: What design change do you want?
+      description: Describe the visual or styling change you'd like to see.
+      placeholder: Example - Change the website colors to match our school colors (white and lime green), or make the activity cards larger.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: design-area
+    attributes:
+      label: Which part of the website needs the design change?
+      description: Select the area to be changed.
+      options:
+        - Overall color scheme
+        - Header/Navigation
+        - Activity cards
+        - Buttons
+        - Filters sidebar
+        - Background
+        - Fonts/Text
+        - Layout/Spacing
+        - Icons/Images
+        - Everything/Multiple areas
+    validations:
+      required: true
+
+  - type: input
+    id: school-colors
+    attributes:
+      label: School colors (if applicable)
+      description: If this involves school colors, please specify them.
+      placeholder: Example - White and lime green (#FFFFFF and #32CD32)
+    validations:
+      required: false
+
+  - type: textarea
+    id: specific-requirements
+    attributes:
+      label: Specific requirements
+      description: List specific requirements for the design change.
+      placeholder: |
+        Example:
+        - Change the header background to lime green
+        - Change the main background to white
+        - Make the activity cards have lime green borders
+        - Add school mascot images from https://octodex.github.com/
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference-examples
+    attributes:
+      label: Reference examples or images
+      description: Provide links to examples or describe what you're looking for.
+      placeholder: Example - Like the design on www.example.com, or use mascot images from https://octodex.github.com/
+    validations:
+      required: false
+
+  - type: dropdown
+    id: must-keep
+    attributes:
+      label: What should NOT be changed?
+      description: Specify if anything should stay the same.
+      options:
+        - Change everything as needed
+        - Keep the current layout structure
+        - Keep the existing functionality
+        - I'll specify below
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional notes
+      description: Any other design-related information or ideas.
+      placeholder: Example - The new design should look professional and be easy to read.
+    validations:
+      required: false

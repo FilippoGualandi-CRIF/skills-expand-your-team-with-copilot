@@ -1,0 +1,78 @@
+name: New Feature Request
+description: Request a new feature or enhancement for the website
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide details below so we can understand and implement your request.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: What new feature would you like?
+      description: Describe the feature or enhancement you'd like to see.
+      placeholder: Example - Add a dark mode option, or add a calendar view for activities.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-solved
+    attributes:
+      label: What problem does this solve?
+      description: Explain why this feature would be helpful for students or teachers.
+      placeholder: Example - Students have been asking for dark mode because it's easier on their eyes, or a calendar view would help avoid scheduling conflicts.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: What category does this feature belong to?
+      description: Select the most relevant category.
+      options:
+        - User Interface / Design
+        - Activity Management
+        - Filtering / Search
+        - User Login / Authentication
+        - Data Display
+        - Student Registration
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How should this feature work?
+      description: Describe the specific behavior or requirements for this feature.
+      placeholder: |
+        Example:
+        - Add a toggle button in the top right corner
+        - When clicked, switch between light and dark color schemes
+        - Remember the user's preference
+        - Dark mode should use dark backgrounds with light text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this feature?
+      description: Select the priority level.
+      options:
+        - High - Students or teachers are actively requesting this
+        - Medium - Would be nice to have
+        - Low - Just an idea for the future
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional details
+      description: Add any other information, examples from other websites, or specific requirements.
+      placeholder: Example - Similar to how Instagram's dark mode works, or here's a link to an example.
+    validations:
+      required: false

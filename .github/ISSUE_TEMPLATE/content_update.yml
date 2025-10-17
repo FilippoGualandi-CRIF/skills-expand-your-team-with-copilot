@@ -1,0 +1,77 @@
+name: Content / Text Update
+description: Request changes to text, labels, messages, or information displayed on the website
+title: "[Content]: "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request updates to text, wording, or information shown on the website.
+
+  - type: dropdown
+    id: content-location
+    attributes:
+      label: Where is the content that needs to be changed?
+      description: Select the location of the text/content.
+      options:
+        - Page title or header
+        - Activity descriptions
+        - Button text
+        - Form labels
+        - Error messages
+        - Help text or instructions
+        - Footer information
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current content
+      description: What does the current text or content say?
+      placeholder: Example - Currently says "Sign Up" or "Welcome to School Activities"
+    validations:
+      required: true
+
+  - type: textarea
+    id: new-content
+    attributes:
+      label: New content
+      description: What should the text or content say instead?
+      placeholder: Example - Should say "Register" or "Welcome to Mergington High School Activities"
+    validations:
+      required: true
+
+  - type: textarea
+    id: change-reason
+    attributes:
+      label: Why should this be changed?
+      description: Explain the reason for this change.
+      placeholder: Example - The current wording is confusing to students, or we need to update the school year information.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: multiple-locations
+    attributes:
+      label: Does this change affect multiple places?
+      description: Should similar text be updated throughout the website?
+      options:
+        - "No - only one specific location"
+        - "Yes - update all similar instances"
+        - "I'm not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-changes
+    attributes:
+      label: Additional content changes
+      description: If there are other related content updates, list them here.
+      placeholder: |
+        Example:
+        - Also change "Activities" to "Clubs" everywhere
+        - Update copyright year to 2024
+    validations:
+      required: false

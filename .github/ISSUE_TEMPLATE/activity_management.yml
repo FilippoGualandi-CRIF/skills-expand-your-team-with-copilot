@@ -1,0 +1,93 @@
+name: Activity Management
+description: Request to add, modify, or remove activities from the website
+title: "[Activity]: "
+labels: ["content", "data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request changes to the activities shown on the website.
+
+  - type: dropdown
+    id: action-type
+    attributes:
+      label: What do you want to do?
+      description: Select the type of change you need.
+      options:
+        - Add a new activity
+        - Modify an existing activity
+        - Remove an activity
+        - Add a new field/property to all activities
+        - Other activity-related change
+    validations:
+      required: true
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity name
+      description: Name of the activity to add, modify, or remove.
+      placeholder: Example - Chess Club, Science Olympiad, Coding Club
+    validations:
+      required: false
+
+  - type: textarea
+    id: activity-details
+    attributes:
+      label: Activity details
+      description: Provide the details for the new or modified activity.
+      placeholder: |
+        Example:
+        - Category: Academic
+        - Day: Wednesday
+        - Time: 3:30 PM - 5:00 PM
+        - Location: Room 204
+        - Description: Learn chess strategies and compete in tournaments
+        - Max participants: 20
+        - Teacher advisor: Mr. Smith
+    validations:
+      required: false
+
+  - type: textarea
+    id: new-field-request
+    attributes:
+      label: New field/property details (if applicable)
+      description: If requesting a new field for all activities, describe it here.
+      placeholder: |
+        Example:
+        - Field name: difficulty_level
+        - Possible values: Beginner, Intermediate, Advanced
+        - Purpose: To help students find activities matching their skill level
+        - Should be optional (not all activities need this field)
+    validations:
+      required: false
+
+  - type: textarea
+    id: change-reason
+    attributes:
+      label: Why is this change needed?
+      description: Explain the reason for this request.
+      placeholder: Example - Students have been asking for this activity, or we need to cancel this activity due to lack of interest.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How soon is this needed?
+      description: Select the timeframe.
+      options:
+        - Urgent - Needed before next week
+        - Soon - Needed within 2-3 weeks
+        - Not urgent - Can be done anytime
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation notes
+      description: Any specific requirements for how this should be implemented.
+      placeholder: Example - The new activity should appear at the top of the list, or make sure the time doesn't conflict with other activities on Wednesday.
+    validations:
+      required: false
